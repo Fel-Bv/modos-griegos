@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="Comprende los modos musicales de manera sencilla.">
+    <meta name="keywords" content="Musica, Teoria musical, Modos griegos">
+    <meta name="author" content="Felipe Alcantar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <base href="/modos-griegos/">
+
+    <title>Modos Musicales</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="./static/css/estilos.css">
+    
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/9f43a6dffe.js"></script>
+    <!-- Bootstrap -->
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="./static/js/herramienta.js"></script>
+    <script src="./static/js/escalas.js"></script>
+    <script src="./static/js/script.js"></script>
+    <script src="./static/js/temas.js"></script>
+</head>
+<body class="bg-light text-dark">
+    <header class="text-center">
+        <h2 class="fw-bold">
+            Modos Griegos
+        </h2>
+        <button id="cambiar-tema">
+            <!-- Icono Luna -->
+            <i id="tema-oscuro" class="fas fa-moon"></i>
+            <!-- Icono Sol -->
+            <i id="tema-claro" class="fas fa-sun d-none"></i>
+        </button>
+    </header>
+
+    <aside id="menu" class="d-none">
+        <menu>
+            <button id="btn-abrir-herramienta">Abrir</button>
+        </menu>
+    </aside>
+
+    <main class="container mx-0">
+        <section class="row contenido">
+            <div class="col-md" id="col-herramienta">
+                <section class="card">
+                    <header class="card-header">
+                        <button class="btn btn-cerrar">&times;</button>
+
+                        <h3 class="card-title">
+                            Descrube la estructura de una escala
+                        </h3>
+                    </header>
+                    <section class="card-body">
+                        <form class="form" id="herramienta-modo">
+                            <div class="form-group">
+                                <label for="modos">Selecciona un modo</label>
+                                <select
+                                    aria-label="Menú de selección de modos"
+                                    class="form-select border-dark"
+                                    name="modo"
+                                    id="modos"
+                                >
+                                    <option value="jon" selected>Jónico</option>
+                                    <option value="dor">Dórico</option>
+                                    <option value="fri">Frigio</option>
+                                    <option value="lid">Lidio</option>
+                                    <option value="mix">Mixolidio</option>
+                                    <option value="eol">Eólico</option>
+                                    <option value="loc">Locrio</option>
+                                </select>
+                            </div>
+                        </form>
+                    </section>
+                    <footer class="card-footer">
+                        <section
+                            class="text-center fw-bold"
+                            id="resultado"
+                        ></section>
+                    </footer>
+                </section>
+            </div>
+
+            <div class="col-md tutorial rounded-3 py-3" id="col-tutorial">
+                <section>
+                    <h3 class="fw-bold mb-3">
+                        ¿Qué son los modos griegos?
+                    </h3>
+                    <p>
+                        Los modos griegos son útiles para darle un tono a una canción, ya sea un tono alegre, oscuro, 
+                        brillante, etc...
+                    </p>
+                    <p>Según <a href="https://es.wikipedia.org/wiki/Modos_griegos">Wikipedia</a>:</p>
+                    <blockquote cite="https://es.wikipedia.org/wiki/Modos_griegos">
+                        Un modo griego es una organización de sonidos ascendentes (que van de un sonido grave a uno 
+                        más agudo) estableciendo distancias de tono o medio tono entre los siete sonidos que lo 
+                        conforman.
+                    </blockquote>
+                    <p>
+                        Los más comunes son el modo "Jónico" y el modo "Eólico", mejor conocidos como escala mayor y 
+                        escala menor respectivamente.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="fw-bold mb-3">
+                        ¿Como obtener la estructura de una escala en cualquier modo griego?
+                    </h3>
+                    <p>
+                        Para saber el orden de tonos y semitonos de una escala, es necesario conocer todos los modos griegos, los cuales estan listados a continuación:
+                    </p>
+                    <ol start="0">
+                        <li>Jónico (Escala mayor)</li>
+                        <li>Dórico</li>
+                        <li>Frigio</li>
+                        <li>Lidio</li>
+                        <li>Mixolidio</li>
+                        <li>Eólico (Escala menor)</li>
+                        <li>Locrio</li>
+                    </ol>
+                    <p>
+                        También cabe a aclarar que para referirme a un tono uso la letra "T", y para referirme a 
+                        medio tono (O semitono), uso la letra "S".
+                    </p>
+                    <p>
+                        Para saber la estructura de una escala en un modo poco común, yo uso un truco, el cuál 
+                        consiste en recorrer la escala mayor "TTSTTTS" a la izquierda una cantidad de veces 
+                        específica, esta cantidad es el número que ves alado de cada modo en la lista anterior (Es 
+                        por eso que inicie la lista desde el número cero).
+                    </p>
+                    <p>
+                        Pongámoslo a prueba. Si queremos saber como es la escala de Do Lidio, tendremos que recorrer 
+                        la escala de Do mayor 3 veces a la izquierda: TTSTTTS (Escala mayor) -> TTTSTTS (Modo Lidio).
+                    </p>
+                </section>
+
+                <footer class="text-center">
+                    <b>
+                        Te recomiendo leer <a href="https://promocionmusical.es/teoria-musical/modos-griegos">este 
+                        articulo</a>.
+                    </b>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
